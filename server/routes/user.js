@@ -12,7 +12,7 @@ const router = express.Router();
       const newUser = new User({ username, password });
       await newUser.save();
       const token = jwt.sign({ username, role: 'user' }, SECRET, { expiresIn: '1h' });
-      res.json({ message: 'User created successfully', token });
+      res.json({ message: 'User created successfullyy', token });
     }
   });
   
